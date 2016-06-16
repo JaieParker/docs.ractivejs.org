@@ -222,7 +222,7 @@ alert( a === b ); // alerts 'true'. Hang on, `a` didn't have a 'four' property?
 alert( a.four ); // alerts '4'. Oh. Right.
 ```
 
-So one the one hand, objects which look identical aren't. On the other, you can set a property of an object and have no idea whether doing so resulted in a change.
+So on the one hand, objects which look identical aren't. On the other, you can set a property of an object and have no idea whether doing so resulted in a change.
 
 There are two possible responses to this problem. First, we could do a 'deep clone' of an object whenever we do `ractive.set(keypath, object)`, using an algorithm similar to [jQuery extend](http://api.jquery.com/jQuery.extend/#jQuery-extend-deep-target-object1-objectN). That would mean any references you held to `object` would become irrelevant. It would also mean a whole load of extra computation, and probably some very strange behaviour with cyclical data structures. No thanks.
 
